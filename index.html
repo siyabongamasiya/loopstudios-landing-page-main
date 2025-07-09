@@ -2,20 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="stylesheet" href="./styles.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Loopstudios landing page</title>
 </head>
 <body>
+
+  <!--menu-->
+  <div id="mobile-menu">
+    <div id="mobile-logo-hamburger">
+      <img id="logo" src="images/logo.svg" alt="logo-image">
+      <img id="close" src="./images/icon-close.svg" alt="icon-close" onclick="toggleMenu()">
+    </div>
+    <nav id="menu-nav">
+          <a class="nav-item" href="">About</a>
+          <a class="nav-item" href="">Careers</a>
+          <a class="nav-item" href="">Events</a>
+          <a class="nav-item" href="">Products</a>
+          <a class="nav-item" href="">Support</a>
+    </nav>
+  </div>
+
   <!--header section-->
 <header>
-  <div id="logo-big-text">
+  <div id="logo-big-text" class="desktop-only">
     <img id="logo" src="images/logo.svg" alt="logo-image">
     <p id="big-text">IMMERSIVE<br>EXPERIENCE<br>THAT DELIVER</p>
   </div>
-  <div id="nav-container">
+  <div id="nav-container" class="desktop-only">
     <nav id="nav">
       <a class="nav-item" href="">About</a>
       <a class="nav-item" href="">Careers</a>
@@ -23,6 +39,17 @@
       <a class="nav-item" href="">Products</a>
       <a class="nav-item" href="">Support</a>
     </nav>
+  </div>
+
+  <!--initially invisible-->
+  <div id="mobile-header"  class="mobile-only">
+    <div id="mobile-logo-hamburger">
+      <img id="logo" src="images/logo.svg" alt="logo-image">
+      <div id="hamburger" onclick="toggleMenu()">
+        <img  src="./images/icon-hamburger.svg" alt="icon-hamburger" >
+      </div>
+    </div>
+    <p id="big-text">IMMERSIVE<br>EXPERIENCE<br>THAT DELIVER</p>
   </div>
 </header>
 
@@ -40,58 +67,52 @@
 
 <!--our creations section-->
 <section id="our-creations-section">
-  <!--text and button-->
-  <div id="our-creations-top">
+  <!--text and button (for desktop)-->
+  <div id="our-creations-top" >
     <p class="title">
       OUR CREATIONS
     </p>
-    <button>
-      SEE ALL
-    </button>
+    <button class="desktop-only" >SEE ALL</button>
   </div>
   <!--grid-->
   <div id="our-creations-grid">
     <!--grid items-->
-    <div class="our-creations-griditem">
-      <img src="./images/desktop/image-deep-earth.jpg" alt="">
-      <p>DEEP EARTH</p>
+    <div class="our-creations-griditem" style="background-image:linear-gradient(to right, hsl(0, 0%, 10%), rgba(255, 255, 255, 0)), url(./images/desktop/image-deep-earth.jpg);">
+      <p>DEEP<br> EARTH</p>
     </div>
 
-    <div class="our-creations-griditem">
-      <img src="./images/desktop/image-night-arcade.jpg" alt="">
-      <p>NIGHT ARCADE</p>
+    <div class="our-creations-griditem" style="background-image:linear-gradient(to right, hsl(0, 0%, 10%), rgba(255, 255, 255, 0)), url(./images/desktop/image-night-arcade.jpg);">
+      <p>NIGHT<br> ARCADE</p>
     </div>
 
-    <div class="our-creations-griditem">
-      <img src="./images/desktop/image-soccer-team.jpg" alt="">
-      <p>SOCCER TEAM VR</p>
+    <div class="our-creations-griditem" style="background-image:linear-gradient(to right, hsl(0, 0%, 10%), rgba(255, 255, 255, 0)), url(./images/desktop/image-soccer-team.jpg);">
+      <p>SOCCER<br> TEAM VR</p>
     </div>
 
-    <div class="our-creations-griditem">
-      <img src="./images/desktop/image-grid.jpg" alt="">
-      <p>THE GRID</p>
+    <div class="our-creations-griditem" style="background-image:linear-gradient(to right, hsl(0, 0%, 10%), rgba(255, 255, 255, 0)), url(./images/desktop/image-grid.jpg);">
+      <p>THE<br> GRID</p>
     </div>
 
-    <div class="our-creations-griditem">
-      <img src="./images/desktop/image-from-above.jpg" alt="">
-      <p>FROM UP ABOVE VR</p>
+    <div class="our-creations-griditem" style="background-image:linear-gradient(to right, hsl(0, 0%, 10%), rgba(255, 255, 255, 0)), url(./images/desktop/image-from-above.jpg);">
+      <p>FROM UP<br> ABOVE VR</p>
     </div>
 
-    <div class="our-creations-griditem">
-      <img src="./images/desktop/image-pocket-borealis.jpg" alt="">
-      <p>POCKET BOREALIS</p>
+    <div class="our-creations-griditem" style="background-image:linear-gradient(to right, hsl(0, 0%, 10%), rgba(255, 255, 255, 0)), url(./images/desktop/image-pocket-borealis.jpg);">
+      <p>POCKET<br> BOREALIS</p>
     </div>
 
-    <div class="our-creations-griditem">
-      <img src="./images/desktop/image-curiosity.jpg" alt="">
-      <p>THE CURIOSITY</p>
+    <div class="our-creations-griditem" style="background-image:linear-gradient(to right, hsl(0, 0%, 10%), rgba(255, 255, 255, 0)), url(./images/desktop/image-curiosity.jpg);">
+      <p>THE<br> CURIOSITY</p>
     </div>
 
-    <div class="our-creations-griditem">
-      <img src="./images/desktop/image-fisheye.jpg" alt="">
-      <p>MAKE IT FISHEYE</p>
+    <div class="our-creations-griditem" style="background-image:linear-gradient(to right, hsl(0, 0%, 10%), rgba(255, 255, 255, 0)), url(./images/desktop/image-fisheye.jpg);">
+      <p>MAKE IT<br> FISHEYE</p>
     </div>
   </div>
+
+   <button class="mobile-only" >
+      SEE ALL
+    </button>
 </section>
 <!--footer-->
 <footer>
@@ -117,6 +138,8 @@
     <p id="copyright">© 2021 Loopstudios. All rights reserved. </p>
   </div>
 </footer>
+
+<script src="./script.js"></script>
 </body>
 </html>
 
