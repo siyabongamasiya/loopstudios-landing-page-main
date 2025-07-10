@@ -67,7 +67,7 @@ header {
 
 
 #big-text{
-    width: 50%;
+    width: 100%;
     height: auto;
     border: 2px solid white;
     color: var(--nav-MainText-Color);
@@ -118,9 +118,9 @@ header {
     background-color: var(--nav-MainText-Color);
     width: 50%;
     height: 100%;
-    padding: 80px;
+    padding: 2vw;
     margin-left: -15vw;
-    margin-top: 50vh;
+    margin-top: 35vh;
 }
 
 #our-creations-section{
@@ -229,14 +229,19 @@ a{
     .mobile-only{
         display: none !important;
     }
+
+    #mobile-menu{
+        display: none;
+    }
 }
 
-@media(max-width: 375px){
+@media(max-width: 768px){
     #nav-container{
         display: none;
     }
 
     #mobile-header{
+        width: 100%;
         flex-direction: column;
     }
 
